@@ -7,4 +7,7 @@ gimmeSH, is tool that generates a custom cheatsheet for `Reverse Shell`, `File T
 ## Installation
 Download the script via git, add an alias to your `.bashrc` and boom, you are good to go.
 
+## Execution
+![execution](/Images/1.png)
+
 
