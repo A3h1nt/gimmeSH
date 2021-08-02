@@ -8,6 +8,10 @@ gimmeSH, is tool that generates a custom cheatsheet for `Reverse Shell`, `File T
 Download the script via git, add an alias to your `.bashrc` and boom, you are good to go.
 
 ## Execution
+### File Transfer Linux
 ![execution](/Images/1.png)
+
+### Web Shells
+![execution](/Images/2.png)
 
 
